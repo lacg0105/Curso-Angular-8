@@ -29,7 +29,11 @@ export class ProductsListComponent implements OnInit {
   deleteProduct(id: string){
     this.productsService.deleteProduct(id)
     .subscribe(rta => {
-      this.fetchProducts();
+      if(rta){
+        const index = this.products.findIndex(product => product.id === id);
+        this.products.splice(index, 1);
+        this.products = [...this.products];
+      }
     });
   }
 

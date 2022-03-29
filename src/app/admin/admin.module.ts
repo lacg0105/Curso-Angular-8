@@ -8,9 +8,10 @@ import { NavComponent } from './components/nav/nav.component';
 import { TableComponent } from './components/table/table.component';
 import { DashComponent } from './components/dash/dash.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, DashComponent, ProductsListComponent],
+  declarations: [ProductFormComponent, NavComponent, TableComponent, DashComponent, ProductsListComponent, OrdersComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
