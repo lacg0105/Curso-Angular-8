@@ -9,9 +9,13 @@ import { TableComponent } from './components/table/table.component';
 import { DashComponent } from './components/dash/dash.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { OrdersComponent } from './components/orders/orders.component';
+import { FormProductComponent } from './components/form-product/form-product.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { UserRecordComponent } from './components/user-record/user-record.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, DashComponent, ProductsListComponent, OrdersComponent],
+  declarations: [ProductFormComponent, NavComponent, TableComponent, DashComponent, ProductsListComponent, OrdersComponent, FormProductComponent, LoginComponent, UserRecordComponent, ProductEditComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

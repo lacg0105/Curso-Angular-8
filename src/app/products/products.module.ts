@@ -11,7 +11,7 @@ import { MaterialModule } from './../material/material.module';
     declarations: [
         ProductsComponent,
         ProductComponent,
-        ProductDetailComponent
+        ProductDetailComponent,
     ],
     imports: [
         CommonModule,
