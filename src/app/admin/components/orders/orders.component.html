@@ -1,0 +1,23 @@
+<table mat-table [dataSource]="orders" class="mat-elevation-z8 orders-table">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <th mat-cell *matCellDef="let order">{{order.id}}</th>
+    </ng-container>
+    <ng-container matColumnDef="idProduct">
+        <th mat-header-cell *matHeaderCellDef>ID Product</th>
+        <th mat-cell *matCellDef="let order">{{order.idProduct}}</th>
+    </ng-container>
+    <ng-container matColumnDef="totalAmount">
+        <th mat-header-cell *matHeaderCellDef>Total Amount</th>
+        <th mat-cell *matCellDef="let order">{{order.totalAmount}}</th>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <th mat-cell *matCellDef="let order">
+            <button mat-button>Editar</button>
+            <button mat-raised-button color="warn" (click)="deleteOrder(order.id)">Eliminar</button>
+        </th>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
