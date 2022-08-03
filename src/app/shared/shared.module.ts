@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from './../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GroupPipe } from './pipes/group/group.pipe';
 
 
 
@@ -16,12 +17,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
+    GroupPipe,
   ],
   exports: [
     ExponentialPipe,
     HighlightDirective,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GroupPipe
   ],
   imports: [
     CommonModule,
