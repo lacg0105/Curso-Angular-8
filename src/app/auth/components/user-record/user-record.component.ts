@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from './../../../core/services/auth/auth.service';
 
 @Component({
   selector: 'app-user-record',
@@ -13,7 +14,8 @@ export class UserRecordComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) { 
     this.buildForm();
   }
@@ -47,9 +49,14 @@ export class UserRecordComponent implements OnInit {
   createUser(event: Event){
     event.preventDefault();
     if (this.form.valid) {
+      const value = this.form.value;
+      this.authService.createUser(value.email, value.password)
+      .then(() => {
+        this.router.navigate(['./auth/login']);
+      });
       console.log('The user was create with success!');  
-      this.router.navigate(['./admin/login']);
     }
   }
 
 }
+

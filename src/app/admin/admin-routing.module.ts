@@ -7,8 +7,6 @@ import { DashComponent } from './components/dash/dash.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { FormProductComponent } from './components/form-product/form-product.component';
-import { LoginComponent } from './components/login/login/login.component';
-import { UserRecordComponent } from './components/user-record/user-record.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 const routes: Routes = [
@@ -39,14 +37,6 @@ const routes: Routes = [
       {
         path: 'products/create',
         component: FormProductComponent
-      },
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'login/record',
-        component: UserRecordComponent
       },
       {
         path: 'products/edit/:id',
